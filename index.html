@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cookie Nest — Fresh Bakes</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#home">Cookie Nest</a>
+        <nav class="site-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Order Now</a>
+        <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <h1>Freshly Baked Cookies at Cookie Nest</h1>
+          <p class="lead">Small-batch cookies made with love. Order online for pickup or delivery.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#pricing">Select Your Package</a>
+            <a class="btn btn-outline" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container">
+          <h2>About Cookie Nest</h2>
+          <p>We are a family-run bakery focused on simple, high-quality ingredients and joyful flavors. We bake small batches to ensure every cookie tastes like home. From classic chocolate chip to exotic matcha, our cookies are made with love and the finest ingredients.</p>
+        </div>
+      </section>
+
+      <section id="pricing" class="section pricing-section">
+        <div class="container">
+          <h2>Pick Your Package</h2>
+          <div class="pricing-options">
+            <div class="pricing-card" data-package="Single Cookie" data-count="1">
+              <h3>Single Cookie</h3>
+              <p class="price">$3</p>
+              <p class="desc">Pick your favorite flavor</p>
+              <button class="btn btn-select">Select</button>
+            </div>
+            <div class="pricing-card" data-package="Half Dozen" data-count="6">
+              <h3>Half Dozen</h3>
+              <p class="price">$16</p>
+              <p class="desc">6 cookies (mix & match)</p>
+              <button class="btn btn-select">Select</button>
+            </div>
+            <div class="pricing-card" data-package="Dozen" data-count="12">
+              <h3>Dozen</h3>
+              <p class="price">$28</p>
+              <p class="desc">12 cookies (mix & match)</p>
+              <button class="btn btn-select">Select</button>
+            </div>
+            <div class="pricing-card" data-package="Party Platter" data-count="24">
+              <h3>Party Platter</h3>
+              <p class="price">$55</p>
+              <p class="desc">24 mixed assorted cookies</p>
+              <button class="btn btn-select">Select</button>
+            </div>
+          </div>
+          <div class="order-summary">
+            <p id="summary-text">Select a package to start your order</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section">
+        <div class="container">
+          <h2>Our Cookie Menu</h2>
+          <div class="cookie-showcase">
+            <article class="cookie-showcase-item">
+              <div class="cookie-showcase-image">
+                <img src="cookies/chocolate-chip-cookie.png" alt="Semi-Sweet Chocolate Chunk Cookie" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Semi-Sweet Chocolate Chunk</h3>
+                <p>Our classic cookie filled with irresistible semi-sweet chocolate chunks and a sprinkle of flaky sea salt.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item alt">
+              <div class="cookie-showcase-image">
+                <img src="cookies/double-chocolate-cookie.png" alt="Double Chocolate Bliss" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Double Chocolate Bliss</h3>
+                <p>For chocolate lovers everywhere. Rich cocoa dough loaded with premium chocolate chips for an indulgent experience.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item">
+              <div class="cookie-showcase-image">
+                <img src="cookies/biscoff-cookie.png" alt="Biscoff Caramel Dream" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Biscoff Caramel Dream</h3>
+                <p>Creamy Biscoff spread swirled into buttery dough for a warm, toasty, caramel-like flavor in every bite.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item alt">
+              <div class="cookie-showcase-image">
+                <img src="cookies/red-velvet-cookie.png" alt="Red Velvet Romance" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Red Velvet Romance</h3>
+                <p>Elegant red velvet with a hint of cocoa, topped with cream cheese swirls for a sophisticated sweet treat.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item">
+              <div class="cookie-showcase-image">
+                <img src="cookies/matcha-cookie.png" alt="Matcha Green Serenity" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Matcha Green Serenity</h3>
+                <p>Silky matcha powder blended into buttery dough with white chocolate chips for a unique, earthy-sweet flavor.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item alt">
+              <div class="cookie-showcase-image">
+                <img src="cookies/oreo-cookie.png" alt="Oreo Crunch Explosion" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Oreo Crunch Explosion</h3>
+                <p>Crushed Oreos mixed into the dough and layered throughout for an iconic chocolate-vanilla cookie experience.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item">
+              <div class="cookie-showcase-image">
+                <img src="cookies/chocolate-mousse-cookie.png" alt="Chocolate Mousse Luxury" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Chocolate Mousse Luxury</h3>
+                <p>Rich dark chocolate mousse folded into our signature cookie base for an ultra-decadent melt-in-mouth experience.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="cookie-showcase-item alt">
+              <div class="cookie-showcase-image">
+                <img src="cookies/pecan-cookie.png" alt="Pecan Pie Paradise" />
+              </div>
+              <div class="cookie-showcase-content">
+                <h3>Pecan Pie Paradise</h3>
+                <p>Buttery dough loaded with toasted pecan pieces, reminiscent of your favorite slice of pecan pie.</p>
+                <div class="showcase-buttons">
+                  <button class="btn btn-primary">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt contact">
+        <div class="container">
+          <h2>Contact & Order</h2>
+          <p>Email: <a href="mailto:orders@cookienest.example">orders@cookienest.catalina</a></p>
+          <p>Phone: <a href="tel:+1234567890">+(373) 608269</a></p>
+          <form class="contact-form" action="#" onsubmit="alert('Demo: form not submitted.'); return false;">
+            <label>
+              Your name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Cookie Nest — Made with care.</p>
+        <nav class="footer-nav">
+          <a href="#">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav');
+      toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+      // Pricing card selection
+      const pricingCards = document.querySelectorAll('.pricing-card');
+      pricingCards.forEach(card => {
+        const btn = card.querySelector('.btn-select');
+        btn.addEventListener('click', () => {
+          // Remove active state from all cards
+          pricingCards.forEach(c => c.classList.remove('selected'));
+          // Add active state to clicked card
+          card.classList.add('selected');
+          // Update summary
+          const packageName = card.getAttribute('data-package');
+          const count = card.getAttribute('data-count');
+          const summaryText = document.getElementById('summary-text');
+          summaryText.textContent = `✓ Selected: ${packageName} – ${count} cookies. Ready to order!`;
+        });
+      });
+    </script>
+  </body>
+</html>
