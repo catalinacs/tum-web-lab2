@@ -32,14 +32,15 @@ tum-web-lab2/
 ![Hero Section](screenshots/hero-section.png)
 The hero section showcases the main call-to-action with navigation.
 
+<br>
+
 ### Pricing & Package Selection
 ![Pricing Options](screenshots/cookie-prices.png)
 Interactive cards where customers select their preferred package with real-time feedback.
 
+<br>
+
 ### Cookie Menu Examples
-
-Cookie images used to showcase different flavors in the menu section of the website.
-
 ![Cookie Menu 1](screenshots/cookie-menu-example_1.png)
 
 
@@ -47,9 +48,10 @@ Cookie images used to showcase different flavors in the menu section of the webs
 
 
 ![Cookie Menu 3](screenshots/cookie-menu-example_3.png)
+Cookie images used to showcase different flavors in the menu section of the website.
 
+<br>
 
 ### Order Summary
 ![Order Summary](screenshots/order.png)
-
 Real-time order summary that updates when customers select a package.
