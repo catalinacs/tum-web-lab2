@@ -2,6 +2,12 @@
 
 This project is a simple landing page created for Lab 2 (Web Programming). The website represents a small cookie business called Cookie Nest and includes basic sections such as hero, about, pricing, and contact.
 
+## Live Demo Video
+
+https://github.com/user-attachments/assets/80511b41-8cce-4df5-b309-fbd59a3b2e41
+
+
+
 ## Overview
 
 Cookie Nest is a modern e-commerce landing page built entirely with **vanilla HTML, CSS, and JavaScript**. The site features:
