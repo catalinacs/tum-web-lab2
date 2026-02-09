@@ -2,10 +2,6 @@
 
 This project is a simple landing page created for Lab 2 (Web Programming). The website represents a small cookie business called Cookie Nest and includes basic sections such as hero, about, pricing, and contact.
 
-## Live Demo
-
-**Visit the live website:** [Cookie Nest Demo](https://catalinacs.github.io/tum-web-lab2)
-
 ## Overview
 
 Cookie Nest is a modern e-commerce landing page built entirely with **vanilla HTML, CSS, and JavaScript**. The site features:
