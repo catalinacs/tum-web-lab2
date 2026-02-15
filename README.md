@@ -4,8 +4,7 @@ This project is a simple landing page created for Lab 2 (Web Programming). The w
 
 ## Live Demo Video
 
-https://github.com/user-attachments/assets/80511b41-8cce-4df5-b309-fbd59a3b2e41
-
+**[Cookie Website Live Demo](https://catalinacs.github.io/tum-web-lab2/)**
 
 
 ## Overview
