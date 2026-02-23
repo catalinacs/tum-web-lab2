@@ -64,6 +64,18 @@ Real-time order summary that updates when customers select a package.
 
 <br>
 
+### Mobile Welcome Banner
+![Mobile Welcome Title](screenshots/mobile-welcome_title.png)
+A mobile-only welcome banner displayed below the header on screens under 992px, implemented using Bootstrap's `d-lg-none` utility. It greets visitors with a quick prompt to order, improving the mobile onboarding experience.
+
+<br>
+
+### Mobile Navigation (Hamburger Dropdown)
+![Mobile Hamburger Dropdown](screenshots/mobile-hamburger_dropdown.png)
+The responsive navbar collapses into a hamburger menu on mobile. Clicking the ☰ icon expands a full-width dropdown with all navigation links. Clicking any link smoothly scrolls to the target section and automatically closes the menu.
+
+<br>
+
 ### Footer
 ![Footer](screenshots/Footer.png)
 Professional footer with quick links, contact information, and company details.
