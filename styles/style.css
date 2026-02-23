@@ -1,17 +1,17 @@
 :root{
-  --bg:#fff7f0;
+  --bg:#fdf5f0;
   --card:#fff;
   --text:#1b1b1b;
   --muted:#6b6b6b;
-  --accent:#d87c48;
-  --accent-dark:#bf5f35;
+  --accent:#C97C5D;
+  --accent-dark:#a85e3f;
   --brown:#6b4423;
   --radius:12px;
   --container:1100px;
 }
 html{scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); background:linear-gradient(180deg, #fff 0%, #fff7f0 100%);}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); background:linear-gradient(180deg, #fff 0%, #fdf5f0 100%);}
 .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
 .site-header{background:#fff;position:sticky;top:0;z-index:40;padding:14px 0;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
@@ -22,7 +22,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .site-nav a:hover{background:rgba(0,0,0,0.05)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem;cursor:pointer}
 
-.hero{padding:80px 0;background:linear-gradient(135deg, rgba(216,124,72,0.08), rgba(216,124,72,0.02));}
+.hero{padding:80px 0;background:linear-gradient(135deg, rgba(201,124,93,0.08), rgba(201,124,93,0.02));}
 .hero-inner{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 .hero h1{font-size:2.1rem;line-height:1.05;margin-bottom:6px}
 .lead{color:var(--muted);max-width:60ch}
@@ -33,12 +33,12 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .section.alt{background:transparent}
 
 /* Pricing Section */
-.pricing-section{background:linear-gradient(135deg, rgba(216,124,72,0.04), transparent)}
+.pricing-section{background:linear-gradient(135deg, rgba(201,124,93,0.04), transparent)}
 
 .pricing-options{margin-top:32px}
 .pricing-card{background:var(--card);padding:32px 24px;border-radius:20px;box-shadow:0 8px 24px rgba(27,27,27,0.08);text-align:center;border:3px solid transparent;transition:all 0.3s ease;cursor:pointer;overflow:visible;width:100%}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(27,27,27,0.12)}
-.pricing-card.selected{border-color:var(--accent);background:linear-gradient(135deg, rgba(216,124,72,0.06), rgba(216,124,72,0.02));box-shadow:0 12px 36px rgba(216,124,72,0.2)}
+.pricing-card.selected{border-color:var(--accent);background:linear-gradient(135deg, rgba(201,124,93,0.06), rgba(201,124,93,0.02));box-shadow:0 12px 36px rgba(201,124,93,0.2)}
 .pricing-card h3{font-size:1.2rem;margin-bottom:12px;font-weight:700}
 .pricing-card .price{font-size:2.4rem;font-weight:700;color:var(--accent);margin:12px 0}
 .pricing-card .desc{font-size:0.9rem;color:var(--muted);margin-bottom:20px}
@@ -47,8 +47,35 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .btn-select:hover{background:var(--accent-dark);transform:scale(1.02)}
 .pricing-card.selected .btn-select{background:var(--accent-dark)}
 
-.order-summary{margin-top:40px;padding:24px;background:linear-gradient(135deg, rgba(216,124,72,0.1), rgba(216,124,72,0.05));border-radius:16px;text-align:center;border-left:4px solid var(--accent)}
-#summary-text{font-size:1.1rem;color:var(--text);font-weight:500}
+.order-summary{margin-top:40px;padding:28px 32px;background:linear-gradient(135deg, rgba(201,124,93,0.1), rgba(201,124,93,0.05));border-radius:16px;border-left:4px solid var(--accent)}
+.selector-placeholder{font-size:1rem;color:var(--muted);text-align:center;margin:0}
+.selector-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.selector-remaining{font-size:0.82rem;font-weight:600;color:var(--accent);background:rgba(201,124,93,0.12);padding:3px 10px;border-radius:20px}
+.selector-subtitle{font-size:0.88rem;color:var(--muted);margin-bottom:14px}
+.selector-confirm{margin-top:16px;font-size:1rem;font-weight:600;color:var(--accent);margin-bottom:0}
+
+/* Single flavor picker */
+.cookie-ingredients{font-size:0.82rem;color:var(--muted);margin-top:8px;line-height:1.6}
+.flavor-radio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-bottom:4px}
+.flavor-radio-option{display:flex;align-items:center;gap:10px;background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:border-color 0.2s,background 0.2s}
+.flavor-radio-option:has(input:checked){border-color:var(--accent);background:rgba(201,124,93,0.06)}
+.flavor-radio-option input{accent-color:var(--accent);flex-shrink:0}
+
+/* Multi cookie stepper */
+.flavor-picker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-bottom:4px}
+.flavor-picker-item{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:10px 14px;border-radius:10px;gap:8px}
+.flavor-picker-name{font-size:0.88rem;color:var(--text);flex:1}
+.flavor-stepper{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.step-btn{width:28px;height:28px;border:none;border-radius:6px;background:var(--accent);color:#fff;font-size:1rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;padding:0}
+.step-btn:hover:not(:disabled){background:var(--accent-dark)}
+.step-btn:disabled{background:#ddd;cursor:not-allowed}
+.step-count{min-width:22px;text-align:center;font-weight:700;font-size:0.95rem}
+
+/* Party platter reveal */
+.party-picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-bottom:4px}
+.party-pick-item{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:12px 16px;border-radius:10px}
+.party-pick-name{font-size:0.9rem;font-weight:500;color:var(--text)}
+.party-pick-qty{font-size:0.95rem;font-weight:700;color:var(--accent)}
 
 /* Cookie Showcase */
 .cookie-showcase{display:flex;flex-direction:column;gap:48px;margin-top:32px}
@@ -62,7 +89,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .cookie-showcase-content p{font-size:1rem;line-height:1.6;color:var(--muted)}
 .showcase-buttons{display:flex;gap:16px;margin-top:12px}
 .showcase-buttons .btn-outline{color:var(--text);border-color:rgba(27,27,27,0.15)}
-.showcase-buttons .btn-outline:hover{background:rgba(216,124,72,0.08);border-color:var(--accent)}
+.showcase-buttons .btn-outline:hover{background:rgba(201,124,93,0.08);border-color:var(--accent)}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
 .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(27,27,27,0.06)}
@@ -75,7 +102,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e7e7e7}
 
 /* Reviews Section */
-.reviews-section{background:linear-gradient(135deg, rgba(216,124,72,0.05), transparent)}
+.reviews-section{background:linear-gradient(135deg, rgba(201,124,93,0.05), transparent)}
 .reviews-grid{margin-top:28px}
 .review-card{background:var(--card);padding:24px;border-radius:16px;box-shadow:0 6px 16px rgba(27,27,27,0.06);transition:transform 0.3s ease,box-shadow 0.3s ease;overflow:visible;width:100%}
 .review-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(27,27,27,0.1)}

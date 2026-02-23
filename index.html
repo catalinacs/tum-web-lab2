@@ -89,8 +89,8 @@
               </div>
             </div>
           </div>
-          <div class="order-summary">
-            <p id="summary-text">Select a package to start your order</p>
+          <div class="order-summary" id="order-selector">
+            <p class="selector-placeholder">Select a package above to customize your order.</p>
           </div>
         </div>
       </section>
@@ -106,9 +106,7 @@
               <div class="cookie-showcase-content">
                 <h3>Semi-Sweet Chocolate Chunk</h3>
                 <p>Our classic cookie filled with irresistible semi-sweet chocolate chunks and a sprinkle of flaky sea salt.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Butter, brown sugar, eggs, plain flour, semi-sweet chocolate chunks, flaky sea salt, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -119,9 +117,7 @@
               <div class="cookie-showcase-content">
                 <h3>Double Chocolate Bliss</h3>
                 <p>For chocolate lovers everywhere. Rich cocoa dough loaded with premium chocolate chips for an indulgent experience.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Dutch-process cocoa, dark chocolate chips, butter, caster sugar, eggs, plain flour, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -132,9 +128,7 @@
               <div class="cookie-showcase-content">
                 <h3>Biscoff Caramel Dream</h3>
                 <p>Creamy Biscoff spread swirled into buttery dough for a warm, toasty, caramel-like flavor in every bite.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Biscoff spread, butter, brown sugar, plain flour, eggs, ground cinnamon, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -145,9 +139,7 @@
               <div class="cookie-showcase-content">
                 <h3>Red Velvet Romance</h3>
                 <p>Elegant red velvet with a hint of cocoa, topped with cream cheese swirls for a sophisticated sweet treat.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Cocoa powder, red food colouring, cream cheese swirl, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -158,9 +150,7 @@
               <div class="cookie-showcase-content">
                 <h3>Matcha Green Serenity</h3>
                 <p>Silky matcha powder blended into buttery dough with white chocolate chips for a unique, earthy-sweet flavor.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Ceremonial-grade matcha, white chocolate chips, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -171,9 +161,7 @@
               <div class="cookie-showcase-content">
                 <h3>Oreo Crunch Explosion</h3>
                 <p>Crushed Oreos mixed into the dough and layered throughout for an iconic chocolate-vanilla cookie experience.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Crushed Oreos, cream filling pieces, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
               </div>
             </article>
 
@@ -184,9 +172,7 @@
               <div class="cookie-showcase-content">
                 <h3>Chocolate Mousse Luxury</h3>
                 <p>Rich dark chocolate mousse folded into our signature cookie base for an ultra-decadent melt-in-mouth experience.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Dark chocolate mousse, Dutch-process cocoa, butter, heavy cream, caster sugar, plain flour, eggs, vanilla extract</p>
               </div>
             </article>
 
@@ -197,9 +183,7 @@
               <div class="cookie-showcase-content">
                 <h3>Pecan Pie Paradise</h3>
                 <p>Buttery dough loaded with toasted pecan pieces, reminiscent of your favorite slice of pecan pie.</p>
-                <div class="showcase-buttons">
-                  <button class="btn btn-primary">Order Now</button>
-                </div>
+                <p class="cookie-ingredients"><strong>Ingredients:</strong> Toasted pecans, brown sugar, butter, plain flour, eggs, pure maple syrup, ground cinnamon, vanilla extract, baking soda</p>
               </div>
             </article>
           </div>
@@ -313,20 +297,109 @@
       const nav = document.querySelector('.site-nav');
       toggle.addEventListener('click', () => nav.classList.toggle('open'));
 
-      // Pricing card selection
-      const pricingCards = document.querySelectorAll('.pricing-card');
-      pricingCards.forEach(card => {
-        const btn = card.querySelector('.btn-select');
-        btn.addEventListener('click', () => {
-          // Remove active state from all cards
-          pricingCards.forEach(c => c.classList.remove('selected'));
-          // Add active state to clicked card
+      const FLAVORS = [
+        'Semi-Sweet Chocolate Chunk',
+        'Double Chocolate Bliss',
+        'Biscoff Caramel Dream',
+        'Red Velvet Romance',
+        'Matcha Green Serenity',
+        'Oreo Crunch Explosion',
+        'Chocolate Mousse Luxury',
+        'Pecan Pie Paradise'
+      ];
+
+      // Party Platter: this week's curated hottest flavors
+      const PARTY_PICKS = [
+        { name: 'Double Chocolate Bliss',  qty: 6 },
+        { name: 'Biscoff Caramel Dream',   qty: 6 },
+        { name: 'Matcha Green Serenity',   qty: 6 },
+        { name: 'Oreo Crunch Explosion',   qty: 6 }
+      ];
+
+      const selectorEl = document.getElementById('order-selector');
+
+      function renderSingle() {
+        selectorEl.innerHTML =
+          '<p class="selector-title">Choose your flavor</p>' +
+          '<div class="flavor-radio-grid">' +
+          FLAVORS.map(f =>
+            '<label class="flavor-radio-option">' +
+            '<input type="radio" name="single-flavor" value="' + f + '" />' +
+            '<span>' + f + '</span>' +
+            '</label>'
+          ).join('') +
+          '</div>' +
+          '<p class="selector-confirm" id="single-confirm"></p>';
+
+        selectorEl.querySelectorAll('input[name="single-flavor"]').forEach(function(input) {
+          input.addEventListener('change', function() {
+            document.getElementById('single-confirm').textContent = '\u2713 1 \xd7 ' + input.value + ' \u2014 ready to order!';
+          });
+        });
+      }
+
+      function renderMultiPicker(count) {
+        var selections = {};
+        FLAVORS.forEach(function(f) { selections[f] = 0; });
+
+        function getTotal() {
+          return FLAVORS.reduce(function(sum, f) { return sum + selections[f]; }, 0);
+        }
+
+        function render() {
+          var remaining = count - getTotal();
+          var done = getTotal() === count;
+          selectorEl.innerHTML =
+            '<p class="selector-title">Pick your ' + count + ' cookies ' +
+            '<span class="selector-remaining">' + remaining + ' left to pick</span></p>' +
+            '<div class="flavor-picker-grid">' +
+            FLAVORS.map(function(f) {
+              return '<div class="flavor-picker-item">' +
+                '<span class="flavor-picker-name">' + f + '</span>' +
+                '<div class="flavor-stepper">' +
+                '<button class="step-btn minus" data-flavor="' + f + '"' + (selections[f] === 0 ? ' disabled' : '') + '>\u2212</button>' +
+                '<span class="step-count">' + selections[f] + '</span>' +
+                '<button class="step-btn plus" data-flavor="' + f + '"' + (remaining === 0 ? ' disabled' : '') + '>+</button>' +
+                '</div></div>';
+            }).join('') +
+            '</div>' +
+            (done ? '<p class="selector-confirm">\u2713 All ' + count + ' cookies selected \u2014 ready to order!</p>' : '');
+
+          selectorEl.querySelectorAll('.step-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              var f = btn.getAttribute('data-flavor');
+              if (btn.classList.contains('plus') && getTotal() < count) selections[f]++;
+              if (btn.classList.contains('minus') && selections[f] > 0) selections[f]--;
+              render();
+            });
+          });
+        }
+        render();
+      }
+
+      function renderPartyPlatter() {
+        selectorEl.innerHTML =
+          '<p class=\"selector-title\">This week\'s hottest flavors</p>' +
+          '<p class="selector-subtitle">Your Party Platter is hand-curated by our bakers each week. Here\'s what\'s inside:</p>' +
+          '<div class="party-picks">' +
+          PARTY_PICKS.map(function(p) {
+            return '<div class="party-pick-item"><span class="party-pick-name">' + p.name + '</span><span class="party-pick-qty">\xd7' + p.qty + '</span></div>';
+          }).join('') +
+          '</div>' +
+          '<p class="selector-confirm">\u2713 24 cookies curated \u2014 ready to order!</p>';
+      }
+
+      var pricingCards = document.querySelectorAll('.pricing-card');
+      pricingCards.forEach(function(card) {
+        var btn = card.querySelector('.btn-select');
+        btn.addEventListener('click', function() {
+          pricingCards.forEach(function(c) { c.classList.remove('selected'); });
           card.classList.add('selected');
-          // Update summary
-          const packageName = card.getAttribute('data-package');
-          const count = card.getAttribute('data-count');
-          const summaryText = document.getElementById('summary-text');
-          summaryText.textContent = `✓ Selected: ${packageName} – ${count} cookies. Ready to order!`;
+          var pkg = card.getAttribute('data-package');
+          var count = parseInt(card.getAttribute('data-count'), 10);
+          if (pkg === 'Single Cookie') renderSingle();
+          else if (pkg === 'Half Dozen' || pkg === 'Dozen') renderMultiPicker(count);
+          else renderPartyPlatter();
         });
       });
     </script>
