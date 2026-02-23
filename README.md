@@ -58,9 +58,8 @@ Customer testimonials highlighting the quality of our cookies and the user-frien
 
 <br>
 
-### Order Summary
+### Contact & Order
 ![Order Summary](screenshots/order.png)
-Real-time order summary that updates when customers select a package.
 
 <br>
 
