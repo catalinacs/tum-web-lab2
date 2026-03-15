@@ -1,0 +1,240 @@
+---
+layout: base.njk
+hero_title: Freshly Baked Cookies
+hero_description: Small-batch cookies made with love. Order online for pickup or delivery.
+---
+
+<main>
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 text-center text-lg-start hero-inner">
+          <h1 class="display-5 fw-bold mb-3">{{ hero_title }}</h1>
+          <p class="lead mb-4">{{ hero_description }}</p>
+          <div class="hero-cta d-grid gap-2 d-sm-flex justify-content-sm-center justify-content-lg-start">
+            <a class="btn btn-primary" href="#pricing">Select Your Package</a>
+            <a class="btn btn-outline" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section alt">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3">About Cookie Nest</h2>
+      <p>We are a family-run bakery focused on simple, high-quality ingredients and joyful flavors. We bake small batches to ensure every cookie tastes like home. From classic chocolate chip to exotic matcha, our cookies are made with love and the finest ingredients.</p>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3">Services</h2>
+      <p>We offer pickup, local delivery, catering for events, corporate orders, and monthly subscription boxes. Delivery areas and catering quotes vary by location — please contact us for custom orders or large requests.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="section pricing-section">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3">Pick Your Package</h2>
+      <div class="pricing-options row g-4">
+        <div class="col-12 col-sm-6 col-lg-3" style="min-width:0">
+          <div class="pricing-card h-100" data-package="Single Cookie" data-count="1">
+            <h3>Single Cookie</h3>
+            <p class="price">$3</p>
+            <p class="desc">Pick your favorite flavor</p>
+            <button class="btn btn-select">Select</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" style="min-width:0">
+          <div class="pricing-card h-100" data-package="Half Dozen" data-count="6">
+            <h3>Half Dozen</h3>
+            <p class="price">$16</p>
+            <p class="desc">6 cookies (mix &amp; match)</p>
+            <button class="btn btn-select">Select</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" style="min-width:0">
+          <div class="pricing-card h-100" data-package="Dozen" data-count="12">
+            <h3>Dozen</h3>
+            <p class="price">$28</p>
+            <p class="desc">12 cookies (mix &amp; match)</p>
+            <button class="btn btn-select">Select</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" style="min-width:0">
+          <div class="pricing-card h-100" data-package="Party Platter" data-count="24">
+            <h3>Party Platter</h3>
+            <p class="price">$55</p>
+            <p class="desc">24 mixed assorted cookies</p>
+            <button class="btn btn-select">Select</button>
+          </div>
+        </div>
+      </div>
+      <div class="order-summary" id="order-selector">
+        <p class="selector-placeholder">Select a package above to customize your order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-4">Our Cookie Menu</h2>
+      <div class="cookie-showcase">
+        <article class="cookie-showcase-item">
+          <div class="cookie-showcase-image">
+            <img src="cookies/chocolate-chip-cookie.png" alt="Semi-Sweet Chocolate Chunk Cookie" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Semi-Sweet Chocolate Chunk</h3>
+            <p>Our classic cookie filled with irresistible semi-sweet chocolate chunks and a sprinkle of flaky sea salt.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Butter, brown sugar, eggs, plain flour, semi-sweet chocolate chunks, flaky sea salt, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item alt">
+          <div class="cookie-showcase-image">
+            <img src="cookies/double-chocolate-cookie.png" alt="Double Chocolate Bliss" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Double Chocolate Bliss</h3>
+            <p>For chocolate lovers everywhere. Rich cocoa dough loaded with premium chocolate chips for an indulgent experience.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Dutch-process cocoa, dark chocolate chips, butter, caster sugar, eggs, plain flour, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item">
+          <div class="cookie-showcase-image">
+            <img src="cookies/biscoff-cookie.png" alt="Biscoff Caramel Dream" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Biscoff Caramel Dream</h3>
+            <p>Creamy Biscoff spread swirled into buttery dough for a warm, toasty, caramel-like flavor in every bite.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Biscoff spread, butter, brown sugar, plain flour, eggs, ground cinnamon, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item alt">
+          <div class="cookie-showcase-image">
+            <img src="cookies/red-velvet-cookie.png" alt="Red Velvet Romance" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Red Velvet Romance</h3>
+            <p>Elegant red velvet with a hint of cocoa, topped with cream cheese swirls for a sophisticated sweet treat.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Cocoa powder, red food colouring, cream cheese swirl, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item">
+          <div class="cookie-showcase-image">
+            <img src="cookies/matcha-cookie.png" alt="Matcha Green Serenity" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Matcha Green Serenity</h3>
+            <p>Silky matcha powder blended into buttery dough with white chocolate chips for a unique, earthy-sweet flavor.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Ceremonial-grade matcha, white chocolate chips, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item alt">
+          <div class="cookie-showcase-image">
+            <img src="cookies/oreo-cookie.png" alt="Oreo Crunch Explosion" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Oreo Crunch Explosion</h3>
+            <p>Crushed Oreos mixed into the dough and layered throughout for an iconic chocolate-vanilla cookie experience.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Crushed Oreos, cream filling pieces, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item">
+          <div class="cookie-showcase-image">
+            <img src="cookies/chocolate-mousse-cookie.png" alt="Chocolate Mousse Luxury" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Chocolate Mousse Luxury</h3>
+            <p>Rich dark chocolate mousse folded into our signature cookie base for an ultra-decadent melt-in-mouth experience.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Dark chocolate mousse, Dutch-process cocoa, butter, heavy cream, caster sugar, plain flour, eggs, vanilla extract</p>
+          </div>
+        </article>
+
+        <article class="cookie-showcase-item alt">
+          <div class="cookie-showcase-image">
+            <img src="cookies/pecan-cookie.png" alt="Pecan Pie Paradise" />
+          </div>
+          <div class="cookie-showcase-content">
+            <h3>Pecan Pie Paradise</h3>
+            <p>Buttery dough loaded with toasted pecan pieces, reminiscent of your favorite slice of pecan pie.</p>
+            <p class="cookie-ingredients"><strong>Ingredients:</strong> Toasted pecans, brown sugar, butter, plain flour, eggs, pure maple syrup, ground cinnamon, vanilla extract, baking soda</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section reviews-section">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3">Customer Reviews</h2>
+      <div class="reviews-grid row g-4">
+        <div class="col-12 col-md-6 col-lg-3" style="min-width:0"><div class="review-card h-100">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-name">Sarah M.</p>
+          </div>
+          <p class="review-text">"The cookies are absolutely incredible! Fresh, perfectly chewy, and the flavors are so creative. My favorite is the Matcha Green Serenity. Ordering from Cookie Nest is so easy—the website is intuitive and I love how I can mix and match my selections."</p>
+          <p class="review-detail">Verified Customer</p>
+        </div></div>
+
+        <div class="col-12 col-md-6 col-lg-3" style="min-width:0"><div class="review-card h-100">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-name">James T.</p>
+          </div>
+          <p class="review-text">"I brought the Party Platter to my office and everyone went crazy for them! The packaging was beautiful, and the variety was perfect. The website made it super simple to find what I needed and place my order. Highly recommend!"</p>
+          <p class="review-detail">Party Platter Order</p>
+        </div></div>
+
+        <div class="col-12 col-md-6 col-lg-3" style="min-width:0"><div class="review-card h-100">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-name">Emily R.</p>
+          </div>
+          <p class="review-text">"As a baker myself, I'm impressed by the quality and attention to detail. The Double Chocolate Bliss is my go-to, and the navigation on this site is so user-friendly. Plus, the interactive pricing makes selecting your order fun and clear!"</p>
+          <p class="review-detail">Monthly Subscriber</p>
+        </div></div>
+
+        <div class="col-12 col-md-6 col-lg-3" style="min-width:0"><div class="review-card h-100">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-name">David K.</p>
+          </div>
+          <p class="review-text">"Cookie Nest's Biscoff cookies are heavenly! What I love most about the site is how clean and modern it looks. Everything loads instantly, the links work perfectly, and I can easily see all the options without confusion. Outstanding experience!"</p>
+          <p class="review-detail">Repeat Customer</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt contact">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3">Contact &amp; Order</h2>
+      <p>Email: <a href="mailto:orders@cookienest.example">orders@cookienest.catalina</a></p>
+      <p>Phone: <a href="tel:+1234567890">+(373) 608269</a></p>
+      <form class="contact-form" action="#" onsubmit="alert('Demo: form not submitted.'); return false;">
+        <label>
+          Your name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>

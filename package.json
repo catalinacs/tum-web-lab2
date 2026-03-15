@@ -1,0 +1,12 @@
+{
+  "name": "cookie-nest",
+  "version": "1.0.0",
+  "description": "Cookie Nest – Fresh Bakes landing page",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
