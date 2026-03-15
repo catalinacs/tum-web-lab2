@@ -2,6 +2,40 @@
 layout: base.njk
 hero_title: Freshly Baked Cookies
 hero_description: Small-batch cookies made with love. Order online for pickup or delivery.
+about_title: About Cookie Nest
+about_description: We are a family-run bakery focused on simple, high-quality
+  ingredients and joyful flavors. We bake small batches to ensure every cookie
+  tastes like home. From classic chocolate chip to exotic matcha, our cookies
+  are made with love and the finest ingredients.
+services_description: We offer pickup, local delivery, catering for events,
+  corporate orders, and monthly subscription boxes. Delivery areas and catering
+  quotes vary by location - please contact us for custom orders or large
+  requests.
+cookies:
+  - cookie_name: Semi-Sweet Chocolate Chunk
+    cookie_description: Our classic cookie filled with irresistible semi-sweet
+      chocolate chunks and a sprinkle of flaky sea salt.
+  - cookie_name: Double Chocolate Bliss
+    cookie_description: For chocolate lovers everywhere. Rich cocoa dough loaded
+      with premium chocolate chips for an indulgent experience.
+  - cookie_name: Biscoff Caramel Dream
+    cookie_description: Creamy Biscoff spread swirled into buttery dough for a warm,
+      toasty, caramel-like flavor in every bite.
+  - cookie_name: Red Velvet Romance
+    cookie_description: Elegant red velvet with a hint of cocoa, topped with cream
+      cheese swirls for a sophisticated sweet treat.
+  - cookie_name: Matcha Green Serenity
+    cookie_description: Silky matcha powder blended into buttery dough with white
+      chocolate chips for a unique, earthy-sweet flavor.
+  - cookie_name: Oreo Crunch Explosion
+    cookie_description: Crushed Oreos mixed into the dough and layered throughout
+      for an iconic chocolate-vanilla cookie experience.
+  - cookie_name: Chocolate Mousse Luxury
+    cookie_description: Rich dark chocolate mousse folded into our signature cookie
+      base for an ultra-decadent melt-in-mouth experience.
+  - cookie_name: Pecan Pie Paradise
+    cookie_description: Buttery dough loaded with toasted pecan pieces, reminiscent
+      of your favorite slice of pecan pie.
 ---
 
 <main>
@@ -22,15 +56,15 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
 
   <section id="about" class="section alt">
     <div class="container">
-      <h2 class="fs-2 fw-bold mb-3">About Cookie Nest</h2>
-      <p>We are a family-run bakery focused on simple, high-quality ingredients and joyful flavors. We bake small batches to ensure every cookie tastes like home. From classic chocolate chip to exotic matcha, our cookies are made with love and the finest ingredients.</p>
+      <h2 class="fs-2 fw-bold mb-3">{{ about_title }}</h2>
+      <p>{{ about_description }}</p>
     </div>
   </section>
 
   <section id="services" class="section">
     <div class="container">
       <h2 class="fs-2 fw-bold mb-3">Services</h2>
-      <p>We offer pickup, local delivery, catering for events, corporate orders, and monthly subscription boxes. Delivery areas and catering quotes vary by location — please contact us for custom orders or large requests.</p>
+      <p>{{ services_description }}</p>
     </div>
   </section>
 
@@ -86,8 +120,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/chocolate-chip-cookie.png" alt="Semi-Sweet Chocolate Chunk Cookie" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Semi-Sweet Chocolate Chunk</h3>
-            <p>Our classic cookie filled with irresistible semi-sweet chocolate chunks and a sprinkle of flaky sea salt.</p>
+            <h3>{{ cookies[0].cookie_name }}</h3>
+            <p>{{ cookies[0].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Butter, brown sugar, eggs, plain flour, semi-sweet chocolate chunks, flaky sea salt, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -97,8 +131,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/double-chocolate-cookie.png" alt="Double Chocolate Bliss" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Double Chocolate Bliss</h3>
-            <p>For chocolate lovers everywhere. Rich cocoa dough loaded with premium chocolate chips for an indulgent experience.</p>
+            <h3>{{ cookies[1].cookie_name }}</h3>
+            <p>{{ cookies[1].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Dutch-process cocoa, dark chocolate chips, butter, caster sugar, eggs, plain flour, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -108,8 +142,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/biscoff-cookie.png" alt="Biscoff Caramel Dream" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Biscoff Caramel Dream</h3>
-            <p>Creamy Biscoff spread swirled into buttery dough for a warm, toasty, caramel-like flavor in every bite.</p>
+            <h3>{{ cookies[2].cookie_name }}</h3>
+            <p>{{ cookies[2].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Biscoff spread, butter, brown sugar, plain flour, eggs, ground cinnamon, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -119,8 +153,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/red-velvet-cookie.png" alt="Red Velvet Romance" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Red Velvet Romance</h3>
-            <p>Elegant red velvet with a hint of cocoa, topped with cream cheese swirls for a sophisticated sweet treat.</p>
+            <h3>{{ cookies[3].cookie_name }}</h3>
+            <p>{{ cookies[3].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Cocoa powder, red food colouring, cream cheese swirl, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -130,8 +164,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/matcha-cookie.png" alt="Matcha Green Serenity" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Matcha Green Serenity</h3>
-            <p>Silky matcha powder blended into buttery dough with white chocolate chips for a unique, earthy-sweet flavor.</p>
+            <h3>{{ cookies[4].cookie_name }}</h3>
+            <p>{{ cookies[4].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Ceremonial-grade matcha, white chocolate chips, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -141,8 +175,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/oreo-cookie.png" alt="Oreo Crunch Explosion" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Oreo Crunch Explosion</h3>
-            <p>Crushed Oreos mixed into the dough and layered throughout for an iconic chocolate-vanilla cookie experience.</p>
+            <h3>{{ cookies[5].cookie_name }}</h3>
+            <p>{{ cookies[5].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Crushed Oreos, cream filling pieces, butter, caster sugar, plain flour, eggs, vanilla extract, baking soda</p>
           </div>
         </article>
@@ -152,8 +186,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/chocolate-mousse-cookie.png" alt="Chocolate Mousse Luxury" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Chocolate Mousse Luxury</h3>
-            <p>Rich dark chocolate mousse folded into our signature cookie base for an ultra-decadent melt-in-mouth experience.</p>
+            <h3>{{ cookies[6].cookie_name }}</h3>
+            <p>{{ cookies[6].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Dark chocolate mousse, Dutch-process cocoa, butter, heavy cream, caster sugar, plain flour, eggs, vanilla extract</p>
           </div>
         </article>
@@ -163,8 +197,8 @@ hero_description: Small-batch cookies made with love. Order online for pickup or
             <img src="cookies/pecan-cookie.png" alt="Pecan Pie Paradise" />
           </div>
           <div class="cookie-showcase-content">
-            <h3>Pecan Pie Paradise</h3>
-            <p>Buttery dough loaded with toasted pecan pieces, reminiscent of your favorite slice of pecan pie.</p>
+            <h3>{{ cookies[7].cookie_name }}</h3>
+            <p>{{ cookies[7].cookie_description }}</p>
             <p class="cookie-ingredients"><strong>Ingredients:</strong> Toasted pecans, brown sugar, butter, plain flour, eggs, pure maple syrup, ground cinnamon, vanilla extract, baking soda</p>
           </div>
         </article>

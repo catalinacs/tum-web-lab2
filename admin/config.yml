@@ -17,3 +17,12 @@ collections:
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Description", name: "hero_description", widget: "text" }
+          - { label: "About Title", name: "about_title", widget: "string" }
+          - { label: "About Description", name: "about_description", widget: "text" }
+          - { label: "Services Description", name: "services_description", widget: "text" }
+          - label: "Cookies"
+            name: "cookies"
+            widget: "list"
+            fields:
+              - { label: "Cookie Name", name: "cookie_name", widget: "string" }
+              - { label: "Cookie Description", name: "cookie_description", widget: "text" }
