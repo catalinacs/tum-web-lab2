@@ -17,6 +17,14 @@ Cookie Nest is a modern e-commerce landing page built entirely with **vanilla HT
 - **About Section** explaining the bakery's moto
 - **Contact Form** for customer inquiries
 
+## Lab 4 Requirements
+
+- **Static Site Generator migration:** The original landing page was migrated to Eleventy (11ty), using Nunjucks templates and layouts, and the site is now statically generated.
+- **Git-based CMS integration:** Decap CMS was added with an admin panel so content can be edited without manually changing source code.
+- **Editable content:** The hero section, about section, services section, and cookie menu text (names and descriptions) are editable through the CMS, with the goal of making as much landing page content editable as possible.
+- **Styling:** The existing Lab 3 CSS styling was preserved and integrated into the Eleventy project structure.
+- **Deployment / hosting:** The project is deployed online (see the live demo link above).
+
 ### Project Structure
 ```
 tum-web-lab2/
