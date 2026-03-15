@@ -1,11 +1,6 @@
 backend:
-  name: github
-  repo: catalinacs/tum-web-lab2
-  branch: main
-  base_url: https://tum-web-lab2-chi.vercel.app
-  auth_endpoint: api/auth
-
-
+  name: git-gateway
+  
 local_backend: true
 
 media_folder: "images/uploads"
