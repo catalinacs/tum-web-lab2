@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+
+local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    format: frontmatter
+    files:
+      - label: "Landing Page"
+        name: "landing"
+        file: "index.njk"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Description", name: "hero_description", widget: "text" }
