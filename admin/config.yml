@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: catalinacs/tum-web-lab2
-  branch: main
+  name: git-gateway
+local_backend: true
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
