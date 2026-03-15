@@ -1,5 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: catalinacs/tum-web-lab2
+  branch: main
+
 
 local_backend: true
 
