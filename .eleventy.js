@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("screenshots");
 
   // Copy Decap CMS config so it is served at /admin/config.yml
-  eleventyConfig.addPassthroughCopy("admin/config.yml");
+  eleventyConfig.addPassthroughCopy("admin");
 
   // Disable the dev server's scroll position preservation on live reload
   eleventyConfig.setServerOptions({
