@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
-local_backend: true
+  name: github
+  repo: catalinacs/tum-web-lab2
+  branch: main
+  auth_endpoint: https://decap-auth.samecatalina.workers.dev/auth
+local_backend: false
+site_url: https://tum-web-lab2.pages.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
