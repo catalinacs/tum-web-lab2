@@ -4,7 +4,7 @@ This project is a simple landing page created for Lab 2 (Web Programming). The w
 
 ## Live Demo Video
 
-**[Cookie Website Live Demo](https://catalinacs.github.io/tum-web-lab2/)**
+**[Cookie Website Live Demo](https://cookienest.netlify.app)**
 
 
 ## Overview
