@@ -387,5 +387,19 @@
         });
       })();
     </script>
+
+    {# Netlify Identity must run on the homepage too: invite emails link to /#invite_token=… #}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function (user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function () {
+              window.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
